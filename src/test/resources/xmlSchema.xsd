@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="TravelerinformationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type="xsd:integer" name="page"/>
+                <xsd:element type="xsd:integer" name="per_page"/>
+                <xsd:element type="xsd:integer" name="totalrecord"/>
+                <xsd:element type="xsd:integer" name="total_pages"/>
+                <xsd:element name="travelers">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Travelerinformation" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element type="xsd:integer" name="id"/>
+                                        <xsd:element type="xsd:string" name="name"/>
+                                        <xsd:element type="xsd:string" name="email"/>
+                                        <xsd:element type="xsd:string" name="adderes"/>
+                                        <xsd:element type="xsd:dateTime" name="createdat"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
